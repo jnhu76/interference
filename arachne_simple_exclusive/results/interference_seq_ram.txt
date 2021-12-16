@@ -1,0 +1,59 @@
+
+Config:
+----------------------------
+SEQ_READER_BYTE_COUNT: 2600000000
+RND_READER_BYTE_COUNT: 260000000
+SEQ_RAM_THREADS:       4
+RND_RAM_THREADS:       0
+CONFIG_STRING:         4_0
+STREAMING:             no
+RES seq_ram_reader 4_0 tid: 0 iterations: 1/4 perf(gb/s): 10.241
+RES seq_ram_reader 4_0 tid: 1 iterations: 1/4 perf(gb/s): 10.2471
+RES seq_ram_reader 4_0 tid: 2 iterations: 1/4 perf(gb/s): 10.2335
+RES seq_ram_reader 4_0 tid: 3 iterations: 1/4 perf(gb/s): 10.2374
+all good :)
+Config:
+----------------------------
+SEQ_READER_BYTE_COUNT: 2600000000
+RND_READER_BYTE_COUNT: 260000000
+SEQ_RAM_THREADS:       4
+RND_RAM_THREADS:       1
+CONFIG_STRING:         4_1
+STREAMING:             no
+RES seq_ram_reader 4_1 tid: 0 iterations: 1/15 perf(gb/s): 10.7031
+RES seq_ram_reader 4_1 tid: 1 iterations: 1/19 perf(gb/s): 13.7151
+RES seq_ram_reader 4_1 tid: 2 iterations: 1/12 perf(gb/s): 8.59398
+RES seq_ram_reader 4_1 tid: 3 iterations: 1/12 perf(gb/s): 8.59479
+RES rnd_ram_reader 4_1 tid: 0 iterations: 1/4 sum: 18068321615218093232 perf(reads/s): 27351269
+all good :)
+Config:
+----------------------------
+SEQ_READER_BYTE_COUNT: 2600000000
+RND_READER_BYTE_COUNT: 260000000
+SEQ_RAM_THREADS:       4
+RND_RAM_THREADS:       2
+CONFIG_STRING:         4_2
+STREAMING:             no
+RES seq_ram_reader 4_2 tid: 0 iterations: 1/14 perf(gb/s): 10.7053
+RES seq_ram_reader 4_2 tid: 1 iterations: 1/11 perf(gb/s): 8.54021
+RES seq_ram_reader 4_2 tid: 2 iterations: 1/11 perf(gb/s): 8.54235
+RES seq_ram_reader 4_2 tid: 3 iterations: 1/14 perf(gb/s): 10.6756
+RES rnd_ram_reader 4_2 tid: 0 iterations: 1/4 sum: 18068321615218093232 perf(reads/s): 29267683
+RES rnd_ram_reader 4_2 tid: 1 iterations: 1/4 sum: 18068321615218093232 perf(reads/s): 29268728
+all good :)
+Config:
+----------------------------
+SEQ_READER_BYTE_COUNT: 2600000000
+RND_READER_BYTE_COUNT: 260000000
+SEQ_RAM_THREADS:       4
+RND_RAM_THREADS:       3
+CONFIG_STRING:         4_3
+STREAMING:             no
+RES seq_ram_reader 4_3 tid: 0 iterations: 1/16 perf(gb/s): 9.84654
+RES seq_ram_reader 4_3 tid: 1 iterations: 1/19 perf(gb/s): 11.7104
+RES seq_ram_reader 4_3 tid: 2 iterations: 1/13 perf(gb/s): 7.9941
+RES seq_ram_reader 4_3 tid: 3 iterations: 1/13 perf(gb/s): 7.99902
+RES rnd_ram_reader 4_3 tid: 0 iterations: 1/4 sum: 18068321615218093232 perf(reads/s): 24010183
+RES rnd_ram_reader 4_3 tid: 1 iterations: 1/4 sum: 18068321615218093232 perf(reads/s): 24010768
+RES rnd_ram_reader 4_3 tid: 2 iterations: 1/4 sum: 18068321615218093232 perf(reads/s): 26711936
+all good :)
