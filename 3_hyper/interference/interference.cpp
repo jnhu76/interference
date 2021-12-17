@@ -233,7 +233,7 @@ int main(int argc, char **argv)
 
    // set thread flags
    arachne_flags[BASE_TEST] = false;
-   MIN_CORES = SEQ_RAM_THREADS + SEQ_NVM_THREADS + RND_RAM_THREADS + RND_NVM_THREADS + LOG_NVM_THREADS + PAGE_NVM_THREADS - 10;
+   MIN_CORES = SEQ_RAM_THREADS + SEQ_NVM_THREADS + RND_RAM_THREADS + RND_NVM_THREADS + LOG_NVM_THREADS + PAGE_NVM_THREADS - 9;
 
    // Arachne init.
    Arachne::minNumCores = MIN_CORES;

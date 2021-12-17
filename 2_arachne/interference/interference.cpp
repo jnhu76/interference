@@ -215,7 +215,7 @@ int main(int argc, char **argv)
 
    // Arachne init.
    auto MIN_CORES = SEQ_RAM_THREADS + SEQ_NVM_THREADS + RND_RAM_THREADS + RND_NVM_THREADS + LOG_NVM_THREADS + PAGE_NVM_THREADS;
-   Arachne::minNumCores = MIN_CORES;
+   Arachne::minNumCores = MIN_CORES + 1;
    // Arachne::disableLoadEstimation = true;
    Arachne::init();
 
