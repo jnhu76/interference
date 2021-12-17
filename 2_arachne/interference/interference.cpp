@@ -40,8 +40,8 @@ void CreateAllThreads()
       // all_threads.emplace_back(make_unique<thread>([&, tid]() {
       //    seq_ram_readers[tid]->Run();
       // }));
-      // Arachne::ThreadId aid = Arachne::createThreadWithClass(1, &SequentialReader::Run_helper, (void *)seq_ram_readers[tid].get());
-      auto aid = Arachne::createThreadWithClass(1, &SequentialReader::Run, seq_ram_readers[tid].get());
+      Arachne::ThreadId aid = Arachne::createThreadWithClass(1, &SequentialReader::Run_helper, (void *)seq_ram_readers[tid].get());
+      // auto aid = Arachne::createThreadWithClass(1, &SequentialReader::Run, seq_ram_readers[tid].get());
       all_threads.emplace_back(std::move(aid));
       all_workers.push_back(seq_ram_readers[tid].get());
    }
@@ -52,8 +52,8 @@ void CreateAllThreads()
       // all_threads.emplace_back(make_unique<thread>([&, tid]() {
       //    seq_nvm_readers[tid]->Run();
       // }));
-      // Arachne::ThreadId aid = Arachne::createThreadWithClass(1, &SequentialReader::Run_helper, (void *)seq_nvm_readers[tid].get());
-      auto aid = Arachne::createThreadWithClass(1, &SequentialReader::Run, seq_nvm_readers[tid].get());
+      Arachne::ThreadId aid = Arachne::createThreadWithClass(1, &SequentialReader::Run_helper, (void *)seq_nvm_readers[tid].get());
+      // auto aid = Arachne::createThreadWithClass(1, &SequentialReader::Run, seq_nvm_readers[tid].get());
       all_threads.emplace_back(std::move(aid));
       all_workers.push_back(seq_nvm_readers[tid].get());
    }
@@ -64,8 +64,8 @@ void CreateAllThreads()
       // all_threads.emplace_back(make_unique<thread>([&, tid]() {
       //    rnd_ram_readers[tid]->Run();
       // }));
-      // Arachne::ThreadId aid = Arachne::createThreadWithClass(1, &RandomReader::Run_helper, (void *) rnd_ram_readers[tid].get());
-      auto aid = Arachne::createThreadWithClass(1, &RandomReader::Run, rnd_ram_readers[tid].get());
+      Arachne::ThreadId aid = Arachne::createThreadWithClass(1, &RandomReader::Run_helper, (void *) rnd_ram_readers[tid].get());
+      // auto aid = Arachne::createThreadWithClass(1, &RandomReader::Run, rnd_ram_readers[tid].get());
       all_threads.emplace_back(std::move(aid));
       all_workers.push_back(rnd_ram_readers[tid].get());
    }
@@ -76,8 +76,8 @@ void CreateAllThreads()
       // all_threads.emplace_back(make_unique<thread>([&, tid]() {
       //    rnd_nvm_readers[tid]->Run();
       // }));
-      // Arachne::ThreadId aid = Arachne::createThreadWithClass(1, &RandomReader::Run_helper, (void *) rnd_nvm_readers[tid].get());
-      auto aid = Arachne::createThreadWithClass(1, &RandomReader::Run, rnd_nvm_readers[tid].get());
+      Arachne::ThreadId aid = Arachne::createThreadWithClass(1, &RandomReader::Run_helper, (void *) rnd_nvm_readers[tid].get());
+      // auto aid = Arachne::createThreadWithClass(1, &RandomReader::Run, rnd_nvm_readers[tid].get());
       all_threads.emplace_back(std::move(aid));
       all_workers.push_back(rnd_nvm_readers[tid].get());
    }
@@ -88,8 +88,8 @@ void CreateAllThreads()
       // all_threads.emplace_back(make_unique<thread>([&, tid]() {
       //    log_writers[tid]->Run();
       // }));
-      // Arachne::ThreadId aid = Arachne::createThreadWithClass(1, &LogWriter::Run_helper, (void *) log_writers[tid].get());
-      auto aid = Arachne::createThreadWithClass(1, &LogWriter::Run, log_writers[tid].get());
+      Arachne::ThreadId aid = Arachne::createThreadWithClass(1, &LogWriter::Run_helper, (void *) log_writers[tid].get());
+      // auto aid = Arachne::createThreadWithClass(1, &LogWriter::Run, log_writers[tid].get());
       all_threads.emplace_back(std::move(aid));
       all_workers.push_back(log_writers[tid].get());
    }
@@ -100,8 +100,8 @@ void CreateAllThreads()
       // all_threads.emplace_back(make_unique<thread>([&, tid]() {
       //    page_flushers[tid]->Run();
       // }));
-      // Arachne::ThreadId aid = Arachne::createThreadWithClass(1, &PageFlusher::Run_helper, (void *) page_flushers[tid].get());
-      auto aid = Arachne::createThreadWithClass(1, &PageFlusher::Run, page_flushers[tid].get());
+      Arachne::ThreadId aid = Arachne::createThreadWithClass(1, &PageFlusher::Run_helper, (void *) page_flushers[tid].get());
+      // auto aid = Arachne::createThreadWithClass(1, &PageFlusher::Run, page_flushers[tid].get());
       all_threads.emplace_back(std::move(aid));
       all_workers.push_back(page_flushers[tid].get());
    }
