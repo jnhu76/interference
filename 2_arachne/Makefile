@@ -6,9 +6,9 @@ SRC_DIR = interference
 BIN_DIR = bin
 
 # Dependencies
-PERFUTILS=../../arachne_all/PerfUtils
-ARACHNE=../../arachne_all/Arachne
-COREARBITER=../../arachne_all/CoreArbiter
+PERFUTILS=../arachne_all/PerfUtils
+ARACHNE=../arachne_all/Arachne
+COREARBITER=../arachne_all/CoreArbiter
 
 PMDK=/home/aim/hjn/pmdk
 
