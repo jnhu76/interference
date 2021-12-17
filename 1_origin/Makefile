@@ -5,14 +5,9 @@ CXXFLAGS=-g -O3 -DNDEBUG=1 -march=native -std=c++17 -Wall -Wformat=2 -Wextra -Ww
 SRC_DIR = interference
 BIN_DIR = bin
 
-# Dependencies
-PERFUTILS=../arachne_all/PerfUtils
-ARACHNE=../arachne_all/Arachne
-COREARBITER=../arachne_all/CoreArbiter
-
 PMDK=/home/aim/hjn/pmdk
 
-LIBS=-I$(ARACHNE)/include -I$(PERFUTILS)/include -I$(COREARBITER)/include  $(ARACHNE)/lib/libArachne.a -L$(COREARBITER)/lib -lCoreArbiter $(PERFUTILS)/lib/libPerfUtils.a  -lpcrecpp -pthread -I$(PMDK)/src/include/ $(PMDK)/src/nondebug/libpmem.a $(PMDK)/src/nondebug/libpmemlog.a -lndctl -ldaxctl
+LIBS=-lpcrecpp -pthread -I$(PMDK)/src/include/ $(PMDK)/src/nondebug/libpmem.a $(PMDK)/src/nondebug/libpmemlog.a -lndctl -ldaxctl
 
 BINS=interference
 
