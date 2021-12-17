@@ -1,5 +1,3 @@
-#include "PageFlusher.hpp"
-#include "LogWriter.hpp"
 #include "SequentialReader.hpp"
 #include "RandomReader.hpp"
 // -------------------------------------------------------------------------------------
@@ -11,7 +9,6 @@ ub8 SEQ_READER_BYTE_COUNT = 2.6e9;
 ub8 RND_READER_BYTE_COUNT = 2.6e8;
 // -------------------------------------------------------------------------------------
 ub4 SEQ_RAM_THREADS = 0;
-
 ub4 RND_RAM_THREADS = 0;
 // -------------------------------------------------------------------------------------
 vector<unique_ptr<SequentialReader>> seq_ram_readers;
