@@ -7,6 +7,7 @@
 #include <vector>
 #include <mutex>
 #include <atomic>
+#include <unistd.h>
 // -------------------------------------------------------------------------------------
 using ub1 = uint8_t;
 using ub2 = uint16_t;

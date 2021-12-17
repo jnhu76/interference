@@ -1,7 +1,6 @@
 #pragma once
 // -------------------------------------------------------------------------------------
 #include "Common.hpp"
-#include "NonVolatileMemory.hpp"
 #include <atomic>
 #include <thread>
 #include <immintrin.h>
@@ -54,7 +53,7 @@ public:
       }
       double ns = nano_seconds[iteration];
       //@formatter:off
-      cout << "RES " << (is_ram ? "seq_ram_reader " : "seq_nvm_reader ") << config
+      cout << "RES seq_ram_reader " << config
            << " tid: " << tid
            << " iterations: " << iteration << "/" << performed_iteration_count
            << " perf(gb/s): " << (byte_count / ns) << endl;

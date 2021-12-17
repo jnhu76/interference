@@ -1,4 +1,4 @@
-clang++ -g0 -O3 -DNDEBUG=1 -march=native -std=c++17 interference/interference.cpp -lpthread || exit -1
+g++ -g0 -O3 -DNDEBUG=1 -march=native -std=c++17 interference/interference.cpp -lpthread || exit -1
 
 # Seqential ram
 echo "" > results/interference_seq_ram.txt

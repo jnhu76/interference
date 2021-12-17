@@ -1,7 +1,6 @@
 #pragma once
 // -------------------------------------------------------------------------------------
 #include "Common.hpp"
-#include "NonVolatileMemory.hpp"
 #include <atomic>
 #include <thread>
 #include <immintrin.h>

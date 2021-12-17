@@ -32,7 +32,7 @@ void CreateAllThreads()
 
    // Random read ram
    for (ub4 tid = 0; tid<RND_RAM_THREADS; tid++) {
-      rnd_ram_readers.emplace_back(make_unique<RandomReader>(NVM_PATH + "/rnd_ram_reader_" + to_string(tid), RND_READER_BYTE_COUNT, true, tid, CONFIG_STRING));
+      rnd_ram_readers.emplace_back(make_unique<RandomReader>(RND_READER_BYTE_COUNT, tid, CONFIG_STRING));
       all_threads.emplace_back(make_unique<thread>([&, tid]() {
          rnd_ram_readers[tid]->Run();
       }));
